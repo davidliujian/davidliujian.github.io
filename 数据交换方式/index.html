@@ -109,18 +109,25 @@
 
 
 
-  <meta name="description" content="三层Web应用程序模型 第一层浏览器是表示层，完成用户接口功能。更“瘦” 第二层Web服务器是功能层，完成客户的应用功能。 第三层数据库服务器是数据层，完成数据处理请求。Web服务器接受客户请求，建立数据库连接，请求数据处理，而后数据库结果返回Web服务器，再传至客户端。 功能层的缺点:1.体积庞大、功能臃肿、复用性差2.须自己考虑诸如分布处理、负载平衡、事务逻辑、持久性和安全性等诸多问题所以：一">
-<meta name="keywords" content="middleware,Java EE">
+  <meta name="description" content="数据交换 网络的目标是实现网络上终端之间的数据通信，需要实现两个机制。一是建立连接在网络上的任何两个终端之间的数据传输通路的机制，二是控制数据沿着源终端至目的终端传输通路完成传输过程的机制。   信道即信号传输通道，发送端将数据转换成信号，信号经过信道传播到达接收端，接收端将信号还原成数据。   电路交换 由电路交换机按需在两个终端之间动态建立信道的过程称为电路交换过程，两个终端之间的信道建立方式">
+<meta name="keywords" content="通信">
 <meta property="og:type" content="article">
-<meta property="og:title" content="middleware4">
-<meta property="og:url" content="http://yoursite.com/middleware4/index.html">
+<meta property="og:title" content="网络技术与应用--数据交换方式">
+<meta property="og:url" content="http://yoursite.com/数据交换方式/index.html">
 <meta property="og:site_name" content="SDN工作者">
-<meta property="og:description" content="三层Web应用程序模型 第一层浏览器是表示层，完成用户接口功能。更“瘦” 第二层Web服务器是功能层，完成客户的应用功能。 第三层数据库服务器是数据层，完成数据处理请求。Web服务器接受客户请求，建立数据库连接，请求数据处理，而后数据库结果返回Web服务器，再传至客户端。 功能层的缺点:1.体积庞大、功能臃肿、复用性差2.须自己考虑诸如分布处理、负载平衡、事务逻辑、持久性和安全性等诸多问题所以：一">
+<meta property="og:description" content="数据交换 网络的目标是实现网络上终端之间的数据通信，需要实现两个机制。一是建立连接在网络上的任何两个终端之间的数据传输通路的机制，二是控制数据沿着源终端至目的终端传输通路完成传输过程的机制。   信道即信号传输通道，发送端将数据转换成信号，信号经过信道传播到达接收端，接收端将信号还原成数据。   电路交换 由电路交换机按需在两个终端之间动态建立信道的过程称为电路交换过程，两个终端之间的信道建立方式">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-05-13T05:20:03.497Z">
+<meta property="og:image" content="http://yoursite.com/数据交换方式/电路交换.png">
+<meta property="og:image" content="http://yoursite.com/数据交换方式/虚电路1.png">
+<meta property="og:image" content="http://yoursite.com/数据交换方式/分组.png">
+<meta property="og:image" content="http://yoursite.com/数据交换方式/转发表.png">
+<meta property="og:image" content="http://yoursite.com/数据交换方式/存储转发.png">
+<meta property="og:image" content="http://yoursite.com/数据交换方式/数据报交换.png">
+<meta property="og:updated_time" content="2018-11-21T15:36:28.601Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="middleware4">
-<meta name="twitter:description" content="三层Web应用程序模型 第一层浏览器是表示层，完成用户接口功能。更“瘦” 第二层Web服务器是功能层，完成客户的应用功能。 第三层数据库服务器是数据层，完成数据处理请求。Web服务器接受客户请求，建立数据库连接，请求数据处理，而后数据库结果返回Web服务器，再传至客户端。 功能层的缺点:1.体积庞大、功能臃肿、复用性差2.须自己考虑诸如分布处理、负载平衡、事务逻辑、持久性和安全性等诸多问题所以：一">
+<meta name="twitter:title" content="网络技术与应用--数据交换方式">
+<meta name="twitter:description" content="数据交换 网络的目标是实现网络上终端之间的数据通信，需要实现两个机制。一是建立连接在网络上的任何两个终端之间的数据传输通路的机制，二是控制数据沿着源终端至目的终端传输通路完成传输过程的机制。   信道即信号传输通道，发送端将数据转换成信号，信号经过信道传播到达接收端，接收端将信号还原成数据。   电路交换 由电路交换机按需在两个终端之间动态建立信道的过程称为电路交换过程，两个终端之间的信道建立方式">
+<meta name="twitter:image" content="http://yoursite.com/数据交换方式/电路交换.png">
 
 
 
@@ -129,7 +136,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/middleware4/">
+  <link rel="canonical" href="http://yoursite.com/数据交换方式/">
 
 
 
@@ -139,7 +146,7 @@
   };
 </script>
 
-  <title>middleware4 | SDN工作者</title>
+  <title>网络技术与应用--数据交换方式 | SDN工作者</title>
   
 
 
@@ -355,7 +362,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/middleware4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/数据交换方式/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="David">
@@ -372,7 +379,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">middleware4
+          <h1 class="post-title" itemprop="name headline">网络技术与应用--数据交换方式
               
             
           </h1>
@@ -397,7 +404,7 @@
                 
               
 
-              <time title="创建时间：2017-05-13 13:19:00 / 修改时间：13:20:03" itemprop="dateCreated datePublished" datetime="2017-05-13T13:19:00+08:00">2017-05-13</time>
+              <time title="创建时间：2018-11-21 23:20:20 / 修改时间：23:36:28" itemprop="dateCreated datePublished" datetime="2018-11-21T23:20:20+08:00">2018-11-21</time>
             
 
             
@@ -407,24 +414,6 @@
             
           </span>
 
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/middleware/" itemprop="url" rel="index"><span itemprop="name">middleware</span></a></span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -460,105 +449,82 @@
       
 
       
-        <h4 id="三层Web应用程序模型"><a href="#三层Web应用程序模型" class="headerlink" title="三层Web应用程序模型"></a>三层Web应用程序模型</h4><ul>
-<li>第一层浏览器是表示层，完成用户接口功能。更“瘦”</li>
-<li>第二层Web服务器是功能层，完成客户的应用功能。</li>
-<li>第三层数据库服务器是数据层，完成数据处理请求。<br>Web服务器接受客户请求，建立数据库连接，请求数据处理，而后数据库结果返回Web服务器，再传至客户端。<blockquote>
-<p>功能层的缺点:1.体积庞大、功能臃肿、复用性差<br>2.须自己考虑诸如分布处理、负载平衡、事务逻辑、持久性和安全性等诸多问题<br>所以：一分为二：显示逻辑层和业务逻辑层<br> 1.显示逻辑层：接受客户请求，调用业务逻辑层的服务，并将结果呈现给客户端。<br>  2.业务逻辑层：完成具体的业务处理。其中隐含了分布处理、负载平衡、事务逻辑、持久性和安全性等技术</p>
-<a id="more"></a>
-</blockquote>
-<h4 id="容器类型"><a href="#容器类型" class="headerlink" title="容器类型"></a>容器类型</h4></li>
-<li>Java EE服务器：是Java EE产品的运行部分。一个Java EE服务器提供EJB容器和Web容器。</li>
-<li>Enterprise JavaBeans(EJB)容器：管理Java EE应用程序的enterprise bean的执行。Enterprise bean和它的容器运行在Java EE服务器中。</li>
-<li>Web容器：管理Java EE应用程序的JSP和Servlet组件的执行。Web组件和它的容器也运行在J2EE服务器中。</li>
-<li>客户端应用程序容器：管理应用程序客户端组件的运行。</li>
-<li>Applet容器：管理applet的执行。由运行在客户端的一个Web浏览器和Java插件一同组成。 </li>
-</ul>
-<h4 id="公共服务"><a href="#公共服务" class="headerlink" title="公共服务"></a>公共服务</h4><ul>
-<li>JNDI (名字和目录服务)：共享用户，网络设备，软件组件，应用模块，服务及其他信息</li>
-<li>RMI/IIOP (支持IIOP协议的远程方法调用): 访问与RMI编程规则兼容的CORBA服务</li>
-<li>JMS(消息服务)：在企业中异步交换业务数据和事件的灵活而可靠的机制</li>
-<li>JDBC (数据库连接服务)</li>
-<li>JTS(java transaction service)/JTA (java transaction API)</li>
-<li>JavaMail和JAF(JavaBeans Activation Framework)</li>
-<li>JCA/JCE/JSSE/JAAS(安全服务体系)//Cryptography</li>
-<li>使用JAXP(Java API for XML Parsing)的XML解析服务</li>
-<li>Java Servlet——是用Java写的一个服务器端小程序，可以处理用户的HTTP请求，返回结果。 </li>
-<li>JSP (JavaServer Page)——一种基于HTML文件（就是一个模板）处理之后能够生成静态内容。可以包含脚本代码的片段，以在最终生成的脚本静态文件中生成。 </li>
-<li>JSTL (JSP标准标签库，JavaServer Page Standard Tag Library)——一组可以模仿脚本代码功能的用在JSP的标准标签。例如，遍历客户端并显示他们对应的信息。</li>
-<li>JSF (Java Server Face)——包含JSF标签（类似于LSTL标签）的JSP页面。此外，JSF允许在页面中定义导航模块（类似于Spring web flow），包括Facelets。 </li>
-<li>The Java API for XML-based Web Services (Java中用来创建基于XML的Web的API，JAX-WS)——对于使用XML通信的Web服务来说至关重要。 </li>
-<li>The Java API for XML Binding (序列化为XML的API，JAXB)——一种可以在JavaBeans和XML文件之间相互转化的方式</li>
-<li>JMS（Java信息服务，Java Message Service）——这个API保证服务器和应用在网络上的通信可靠、异步。ActiveMQ实现了JMS。 </li>
-<li>JavaMail API——提供通过应用程序发送邮件方式。 </li>
-<li>JAXR（提供XML注册的API，Java API for XML Registries)——一个可以注册包含了元数据的XML的API。 </li>
-<li>JPA(Java持久化API，Java Persistence API)——这是一个在数据库中存储对象的ORM（对象关系表，Object/relational mapping)定义。</li>
-<li>JNDI（Java命名和目录接口）——能存储和检索资源、通过名字查找信息的方式</li>
-<li>JAAS（Java鉴别与授权服务，Java Authentication and Authorization Service)——识别并控制服务权限的一张方式。 </li>
-<li>JAX-RS——定义REST（含状态传输）之类的服务的API。 </li>
-<li>Managed Beans——一个可以执行嵌入代码的Java对象。在Sping框架中，这是一些添加了@Autowired注释的对象。 </li>
-<li>CDI（上下文和依赖注入，Contexts and Dependency Injection for Java EE）——CDI是Java EE整个下一代类型安全的依赖注入的事实上的API。在Sping框架中，应用程序可以设计应用的上下文，控制反转（IoC）和依赖注入功能（DI）。 </li>
-<li>Bean确认——通过设定好的规则判断Java Beans的状态是有效的。 </li>
-<li>JACC（Java Authorization Contract for Containers）——在J2EE应用服务器和特定的授权认证服务器之间定义的一个连接的协约。 </li>
-<li>JASPIC（Java认证服务提供者接口，Java Authentication Service Provider Interface）——这是与JACC互补认证的SPI（也就是服务API，Service API）。它定义了应用程序如何通过传统的认证服务。 </li>
-</ul>
-<h4 id="Java-EE-7新特征"><a href="#Java-EE-7新特征" class="headerlink" title="Java EE 7新特征"></a>Java EE 7新特征</h4><ul>
-<li>低延迟数据交换：Java API for WebSocket 1.0<ul>
-<li>基于 HTTP 的 WebSockets 为解决低延迟和双向通信提供了一种解决方案 </li>
-</ul>
-</li>
-<li>简化应用数据分析和处理：Java API for JSON Processing 1.0<ul>
-<li>通过 Java API 中的 JSON Processing 1.0，JSON 处理过程标准化为一个单一的 API，应用程序不需要使用第三方的类库。 </li>
-</ul>
-</li>
-<li>可扩展的RESTful服务：JAX-RS 2.0<ul>
-<li>增加了异步响应处理，这对于支持对数据有着高要求的 HTML5 客户端的扩展是至关重要的 </li>
-<li>可以使用过滤器和实体拦截器。这样开发人员就可以使用标准的 API 来实现过滤和拦截功能，使开发过程变得更加便捷和高效 </li>
-</ul>
-</li>
-<li>增强开发的易用性：JSF 2.2<ul>
-<li>增加了对 HTML5 的支持 </li>
-</ul>
-</li>
-</ul>
-<h4 id="EJB"><a href="#EJB" class="headerlink" title="EJB"></a>EJB</h4><ul>
-<li>EJB容器是一个EJB引擎，它提供了EJB组件运行的环境，并对EJB组件进行管理</li>
-<li>EJB容器一般包含在EJB服务器（或应用服务器）中，EJB服务器可以拥有一到多个EJB容器</li>
-<li>比较有名的支持EJB的服务器有GlassFish ，Sun One，Interstage，Websphere，Weblogic，JBoss，JRun等</li>
-</ul>
-<h4 id="Enterprise-Bean"><a href="#Enterprise-Bean" class="headerlink" title="Enterprise Bean"></a>Enterprise Bean</h4><ul>
-<li>Enterprise beans are Java EE components that implement Enterprise JavaBeans (EJB) technology </li>
-<li>在EJB容器里运行</li>
-<li>使用java语言编写，是封装了应用的业务逻辑的服务端组件</li>
-</ul>
-<p>什么时候使用Enterprise Bean？</p>
-<ul>
-<li>应用必须可扩展</li>
-<li>事物必须确保数据的完整性</li>
-<li>程序将拥有各种各样的客户端</li>
-</ul>
-<p>Enterprise Bean类型</p>
-<ul>
-<li>session</li>
-<li>message-driven:一种enterprise bean允许java EE程序异步处理消息</li>
-</ul>
-<h4 id="什么是session-bean-会话bean有几种子类型？分别的应用场合。"><a href="#什么是session-bean-会话bean有几种子类型？分别的应用场合。" class="headerlink" title="什么是session　bean?会话bean有几种子类型？分别的应用场合。"></a>什么是session　bean?会话bean有几种子类型？分别的应用场合。</h4><blockquote>
-<p>session bean 是一种非持久的bean,封装了业务逻辑，可以在本地、远程或者web service 客户端以编程形式调用，分为三类：            </p>
-<pre><code>- 有状态session bean:状态代表着服务器与某一特定客户端的交互，通过方法调用，bean可以保持客户端的信息协调客户端和应用程序其他组件，为客户端提供一个简单视图，并负责管理enterprise bean 的工作流          
-- 无状态session bean:实现了web service，为所有客户端提供服务    
-- 单例 session bean:可以被多线程访问，状态全局共享          
-</code></pre></blockquote>
-<h4 id="JPA-：-Java-Persistence-API"><a href="#JPA-：-Java-Persistence-API" class="headerlink" title="JPA ：   Java Persistence API"></a>JPA ：   Java Persistence API</h4><blockquote>
-<p>JPA是基于Java持久化的解决方案，主要是为了解决ORM框架的差异，它的出现在某种程度上能够解决目前ORM框架之间不能够兼容的问题，对开发人员来说，能够更好的在JPA规范下进行系统开发。</p>
+        <h1 id="数据交换"><a href="#数据交换" class="headerlink" title="数据交换"></a>数据交换</h1><blockquote>
+<p>网络的目标是实现网络上终端之间的数据通信，需要实现两个机制。一是建立连接在网络上的任何两个终端之间的数据传输通路的机制，二是控制数据沿着源终端至目的终端传输通路完成传输过程的机制。</p>
 </blockquote>
 <blockquote>
-<p>JPA并不是一项技术，而是一种标准，因为JPA只是一套接口，本身不能完成任何事情。JPA只是规范了Java持久化的官方标准。JPA有以下几个优点:          </p>
-<pre><code>- 可持久化Java对象
-- 使用简单
-- 规范标准化
-- 事务性、大数据量
-</code></pre></blockquote>
-
+<p>信道即信号传输通道，发送端将数据转换成信号，信号经过信道传播到达接收端，接收端将信号还原成数据。</p>
+</blockquote>
+<hr>
+<h2 id="电路交换"><a href="#电路交换" class="headerlink" title="电路交换"></a>电路交换</h2><blockquote>
+<p>由<strong>电路交换机</strong><font color="red"><strong>按需</strong></font>在两个终端之间动态建立信道的过程称为<strong>电路交换过程</strong>，两个终端之间的信道建立方式称为电路交换方式。</p>
+</blockquote>
+<h3 id="为什么是按需动态建立信道呢？"><a href="#为什么是按需动态建立信道呢？" class="headerlink" title="为什么是按需动态建立信道呢？"></a>为什么是按需动态建立信道呢？</h3><p>如果采用两两互连的方式，信道固定，终端之间随时可以传输数据，并且终端可以同时与其他所有终端通信。但是如果终端之间存在双向信道，n个终端需要n*(n-1)个信道。<br>考虑在实际通信过程中，每一个终端同时与所有其他终端通信的可能性几乎没有，n个终端同时需要互相之间两两通信的可能性页几乎没有，所以采取<strong>通过设备互连终端，由设备按需建立终端之间的信道</strong>，这里的设备就是<strong>电路交换机</strong>！<br><a id="more"></a><br><img src="/数据交换方式/电路交换.png" title="电路交换"></p>
+<h3 id="电路交换的特点"><a href="#电路交换的特点" class="headerlink" title="电路交换的特点"></a>电路交换的特点</h3><p>优点：    </p>
+<ul>
+<li>无需建立控制数据传输过程的机制；</li>
+<li>终端之间信道具有固定的数据传输速率，适合语音传输  </li>
+</ul>
+<p>缺点：</p>
+<ul>
+<li>独占两个终端之间的信道，导致信道经过的物理链路利用率低</li>
+<li>不能保证多对终端之间同时进行通信</li>
+<li>信道经过的物理链路要求相同的传输速率，物理链路的连接方式收到严格限制</li>
+</ul>
+<hr>
+<h2 id="虚电路交换"><a href="#虚电路交换" class="headerlink" title="虚电路交换"></a>虚电路交换</h2><p>上面电路交换存在一个严重的缺点，独占两个终端之间的信道，这就导致信道经过的物理链路利用率低。如何解决这个问题呢？            </p>
+<pre><code>那就需要物理链路共享，允许多对终端共享某段物理链路带宽。
+</code></pre><img src="/数据交换方式/虚电路1.png" title="共享链路">
+<h3 id="如果共享链路，交换机如何转发数据呢？"><a href="#如果共享链路，交换机如何转发数据呢？" class="headerlink" title="如果共享链路，交换机如何转发数据呢？"></a>如果共享链路，交换机如何转发数据呢？</h3><p><strong>1. 标识符和分组</strong>    </p>
+<pre><code>数据标识符：对每一对终端之间传输的数据分配唯一的标识符。
+</code></pre><img src="/数据交换方式/分组.png" title="共享链路分组">
+<p><strong>2. 转发表</strong>    </p>
+<pre><code>转发表：建立不同终端对之间的传输路径，并将数据标识符与传输路径绑定在一起。
+</code></pre><img src="/数据交换方式/转发表.png" title="转发表">
+<p>如上图，A<->D的数据标识符为1，B<->E的数据标识符为2，C<->F的数据标识符为3。</-></-></-></p>
+<pre><code>通过标识符分组以及转发表两种机制，对每一组数据进行解析得到数据标识符，
+从转发表获取此标识符对应的端口，就可以实现数据传输了，也就可以实现链路共享啦！
+</code></pre><h3 id="平滑流量问题如何解决？"><a href="#平滑流量问题如何解决？" class="headerlink" title="平滑流量问题如何解决？"></a>平滑流量问题如何解决？</h3><p>共享物理链路，在一段时间内，要求多对终端之间传输的数据量必须小于交换机之间物理链路相同时间内能够传输的数据量！<br>由于终端之间数据具有间歇性、突发性，在某一瞬间，可能发生多对终端之间的数据量短暂大于交换机之间物理链路能够传输的数据量的情况。         </p>
+<p><strong>3.存储转发</strong>          </p>
+<img src="/数据交换方式/存储转发.png" title="存储转发">
+<pre><code>- 交换机将通过输入端口接收到的信号还原成分组并存储在输入端口的输入队列中
+- 从分组中分离出标识符，根据输入分组的端口和标识符在转发表中找到匹配的转发项
+- 将分组从输入端口输入队列转移到输出端口输出队列
+- 输出队列中的分组按照先到先输出的原则通过输出端口输出
+</code></pre><h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><h4 id="含义"><a href="#含义" class="headerlink" title="含义"></a>含义</h4><p>虚电路是指一对终端之间的传输路径，且该传输路径通过转发表建立，并与唯一标识该对终端之间传输的数据的标识符绑定在一起。<br>通过建立虚电路实现数据交换的方式称为虚电路交换。    </p>
+<h4 id="建立数据传输通路机制"><a href="#建立数据传输通路机制" class="headerlink" title="建立数据传输通路机制"></a>建立数据传输通路机制</h4><pre><code>- 数据标识符    
+- 转发表    
+</code></pre><h4 id="控制数据传输过程机制"><a href="#控制数据传输过程机制" class="headerlink" title="控制数据传输过程机制"></a>控制数据传输过程机制</h4><pre><code>- 存储转发
+</code></pre><hr>
+<h2 id="数据报交换"><a href="#数据报交换" class="headerlink" title="数据报交换"></a>数据报交换</h2><p>让我们来分析一下虚电路。<br>建立虚电路的方式无非两种，按需动态建立，或者事先建立好：</p>
+<ul>
+<li>动态建立：建立虚电路，释放虚电路，传输时延长！可能发生终端之间实际传输数据的时间远小于终端之间建立、释放虚电路的时间的情况！</li>
+<li>事先建立好：两两之间建立，转发项数目大，存储空间大！处理时间长！可能大量虚电路是长时间不作用的，浪费处理时间和存储空间，显然不合理！</li>
+</ul>
+<p>尤其是面向终端之间通信，连接的终端数量很大，终端之间与谁通信不确定，通信时间不确定，传输数据量也不确定，所以虚电路交换需要改进！    </p>
+<p>如何改进？无非从数据传输路径建立机制，或者控制数据传输过程机制上改进。</p>
+<h3 id="数据传输路径建立机制"><a href="#数据传输路径建立机制" class="headerlink" title="数据传输路径建立机制"></a>数据传输路径建立机制</h3><ul>
+<li>虚电路标识符改为每个终端地址</li>
+<li>每一对终端之间传输路径改为指向终端的传输路径</li>
+</ul>
+<h3 id="控制数据传输过程机制-1"><a href="#控制数据传输过程机制-1" class="headerlink" title="控制数据传输过程机制"></a>控制数据传输过程机制</h3><ul>
+<li>用源和目的地址取代分组中的虚电路标识符</li>
+<li>用分组目的地址查找转发表确定通往目的终端的传输路径</li>
+</ul>
+<img src="/数据交换方式/数据报交换.png" title="数据报交换">
+<h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><h4 id="含义-1"><a href="#含义-1" class="headerlink" title="含义"></a>含义</h4><ul>
+<li>为终端分配地址，修改分组格式。  </li>
+<li>转发表中的转发项给出通往每一个终端的传输路径。  </li>
+<li>以分组<strong>目的地址</strong>查找转发表，确定分组转发端口。<br><em>具有以上特征的交换方式称为数据报分组交换，简称数据交换。</em> </li>
+</ul>
+<pre><code>数据报交换方式适合面向终端通信的网络！    
+有时到目的地址可以有多种路径。
+分组独立选择传输路径，分组发送与接收顺序可能不一致。但是均衡了网络负载，容错性好！
+</code></pre><h4 id="建立数据传输通路机制-1"><a href="#建立数据传输通路机制-1" class="headerlink" title="建立数据传输通路机制"></a>建立数据传输通路机制</h4><pre><code>- 终端地址
+- 转发表
+</code></pre><h4 id="控制数据传输过程机制-2"><a href="#控制数据传输过程机制-2" class="headerlink" title="控制数据传输过程机制"></a>控制数据传输过程机制</h4><pre><code>- 分组控制信息：源地址和目的地址
+- 存储转发机制
+</code></pre>
       
     </div>
 
@@ -581,9 +547,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/middleware/" rel="tag"># middleware</a>
-          
-            <a href="/tags/Java-EE/" rel="tag"># Java EE</a>
+            <a href="/tags/通信/" rel="tag"># 通信</a>
           
         </div>
       
@@ -596,8 +560,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/middleware3/" rel="next" title="middleware3">
-                <i class="fa fa-chevron-left"></i> middleware3
+              <a href="/middleware4/" rel="next" title="middleware4">
+                <i class="fa fa-chevron-left"></i> middleware4
               </a>
             
           </div>
@@ -605,10 +569,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/数据交换方式/" rel="prev" title="网络技术与应用--数据交换方式">
-                网络技术与应用--数据交换方式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -845,7 +805,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#三层Web应用程序模型"><span class="nav-number">1.</span> <span class="nav-text">三层Web应用程序模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#容器类型"><span class="nav-number">2.</span> <span class="nav-text">容器类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#公共服务"><span class="nav-number">3.</span> <span class="nav-text">公共服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-EE-7新特征"><span class="nav-number">4.</span> <span class="nav-text">Java EE 7新特征</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EJB"><span class="nav-number">5.</span> <span class="nav-text">EJB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Enterprise-Bean"><span class="nav-number">6.</span> <span class="nav-text">Enterprise Bean</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是session-bean-会话bean有几种子类型？分别的应用场合。"><span class="nav-number">7.</span> <span class="nav-text">什么是session　bean?会话bean有几种子类型？分别的应用场合。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JPA-：-Java-Persistence-API"><span class="nav-number">8.</span> <span class="nav-text">JPA ：   Java Persistence API</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据交换"><span class="nav-number">1.</span> <span class="nav-text">数据交换</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#电路交换"><span class="nav-number">1.1.</span> <span class="nav-text">电路交换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么是按需动态建立信道呢？"><span class="nav-number">1.1.1.</span> <span class="nav-text">为什么是按需动态建立信道呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#电路交换的特点"><span class="nav-number">1.1.2.</span> <span class="nav-text">电路交换的特点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#虚电路交换"><span class="nav-number">1.2.</span> <span class="nav-text">虚电路交换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如果共享链路，交换机如何转发数据呢？"><span class="nav-number">1.2.1.</span> <span class="nav-text">如果共享链路，交换机如何转发数据呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#平滑流量问题如何解决？"><span class="nav-number">1.2.2.</span> <span class="nav-text">平滑流量问题如何解决？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结"><span class="nav-number">1.2.3.</span> <span class="nav-text">小结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#含义"><span class="nav-number">1.2.3.1.</span> <span class="nav-text">含义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建立数据传输通路机制"><span class="nav-number">1.2.3.2.</span> <span class="nav-text">建立数据传输通路机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制数据传输过程机制"><span class="nav-number">1.2.3.3.</span> <span class="nav-text">控制数据传输过程机制</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据报交换"><span class="nav-number">1.3.</span> <span class="nav-text">数据报交换</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据传输路径建立机制"><span class="nav-number">1.3.1.</span> <span class="nav-text">数据传输路径建立机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#控制数据传输过程机制-1"><span class="nav-number">1.3.2.</span> <span class="nav-text">控制数据传输过程机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小结-1"><span class="nav-number">1.3.3.</span> <span class="nav-text">小结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#含义-1"><span class="nav-number">1.3.3.1.</span> <span class="nav-text">含义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#建立数据传输通路机制-1"><span class="nav-number">1.3.3.2.</span> <span class="nav-text">建立数据传输通路机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#控制数据传输过程机制-2"><span class="nav-number">1.3.3.3.</span> <span class="nav-text">控制数据传输过程机制</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>

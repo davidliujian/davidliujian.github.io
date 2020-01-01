@@ -399,7 +399,7 @@
                 
               
 
-              <time title="创建时间：2020-01-01 15:31:08 / 修改时间：15:33:21" itemprop="dateCreated datePublished" datetime="2020-01-01T15:31:08+08:00">2020-01-01</time>
+              <time title="创建时间：2020-01-01 15:31:08 / 修改时间：15:38:49" itemprop="dateCreated datePublished" datetime="2020-01-01T15:31:08+08:00">2020-01-01</time>
             
 
             
@@ -457,8 +457,8 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/Tomcat01/tomcat.jpg" rel="gallery_ck4uzj1w200030ockfrzrd6qm" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/Tomcat01/tomcat.jpg" itemprop="contentUrl">
+              <a class="post-gallery-img fancybox" href="/Tomcat01/tomcat2.jpg" rel="gallery_ck4uzoxka0002dgckyxftet02" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="/Tomcat01/tomcat2.jpg" itemprop="contentUrl">
               </a>
             
           
@@ -470,29 +470,26 @@
 
       
         
-          
-            <blockquote>
+          <blockquote>
 <p>前不久，公司的项目正在从基于OSGI的karaf框架切换到tomcat平台，借此机会，想研究一下tomcat源码，对应用底层的运行机制进一步理解，提升自己的能力。</p>
 </blockquote>
 <h3 id="Tomcat源码下载"><a href="#Tomcat源码下载" class="headerlink" title="Tomcat源码下载"></a>Tomcat源码下载</h3><p><a href="https://tomcat.apache.org/" target="_blank">tomcat官网</a></p>
 <p>点击左侧Download下面的最新版本 Tomcat 9,可以看到tomcat分为Binary Distributions与Source Code Distributions两种发行方式，这里选择Source Code Distributions源码发行版。</p>
 <p>下载，解压。</p>
 <p>jdk、maven安装以及本地环境变量的配置，网上很多。</p>
-<p>准备完毕。</p>
-<h3 id="Tomcat源码导入"><a href="#Tomcat源码导入" class="headerlink" title="Tomcat源码导入"></a>Tomcat源码导入</h3><p>当然是使用最好用的IDEA了。tomcat使用的Ant软件构件工具，我们使用更熟悉的maven工具。maven工程必须要有一个pom.xml，这是定义项目所依赖的jar包。</p>
-<p>tomcat依赖哪些jar包呢？其实这个pom.xml网上也有很多，但是里面定义的依赖的jar版本号有可能与你下载的tomcat版本不匹配。</p>
-<p>build.properties.default这个文件是tomcat源码中的，这里面定义了你所下载的tomcat版本所对应的依赖的jar包版本。你可以与pom文件中的jar版本作比较，替换成此文件中的版本号。</p>
-<p>tomcat 9的最新版本中，我在对比的时候，发现有个jar的版本比较高，并且在maven的远程仓库中找不到此版本的jar包。<br>下面是build.properties.default中定义的jdt的version是4.13，此版本的jar并不在maven的远程仓库中。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">jdt.version=4.13</span><br><span class="line">jdt.release=R-4.13-201909161045/</span><br><span class="line">jdt.checksum.enabled=true</span><br><span class="line">jdt.checksum.algorithm=SHA-512</span><br><span class="line">jdt.checksum.value=d608e4b7fc9b061e327ad5c39112c032e310a48c57ddd01c9349f2be8f5ce4d3d0c3862b6b5cc105220a06a6dd62c477de654b9fbe6f4c8a3d3de816e5de19f7</span><br><span class="line">jdt.home=$&#123;base.path&#125;/ecj-$&#123;jdt.version&#125;</span><br><span class="line">jdt.jar=$&#123;jdt.home&#125;/ecj-$&#123;jdt.version&#125;.jar</span><br><span class="line"># The download will be moved to the archive area eventually. We are taking care of that in advance.</span><br><span class="line">jdt.loc.1=http://archive.eclipse.org/eclipse/downloads/drops4/$&#123;jdt.release&#125;/ecj-$&#123;jdt.version&#125;.jar</span><br><span class="line">jdt.loc.2=http://download.eclipse.org/eclipse/downloads/drops4/$&#123;jdt.release&#125;/ecj-$&#123;jdt.version&#125;.jar</span><br></pre></td></tr></table></figure></p>
-<p>所以当我们定义下面的依赖时，找不到此jar包。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">	&lt;groupId&gt;org.eclipse.jdt.core.compiler&lt;/groupId&gt;</span><br><span class="line">	&lt;artifactId&gt;ecj&lt;/artifactId&gt;</span><br><span class="line">	&lt;version&gt;4.13&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
-<p>我尝试过去build.properties.default定义的jdt的地址把4.13版本的jar下载下来，放到我的本地仓库中，但是没生效，原因网上有很多，这里不做追究。之后发现公司所用的tomcat的版本是tomcat7，于是，重新下载tomcat7的源码，按照上面所说的maven方式，搞定pom.xml，之后将此maven工程导入到IDEA中。</p>
-<p>找到Bootstrap.java，运行。</p>
-<hr>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>相信你在上面的过程中会有很多问题，但是你已经开始了，这不就是一个最大的进步么。当你一步步去解决问题，难道不是会有更多的收获么？问题总会水落石出，万事开头难，贵在坚持。</p>
-
+<p>准备完毕。<br>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/Tomcat01/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+         
+          <!--/noindex-->
         
       
-    </div>
+    </p></div>
 
     
 
@@ -647,7 +644,7 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/Thinking-Life/life.png" rel="gallery_ck4uzj1vr00010ock59kogmd9" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+              <a class="post-gallery-img fancybox" href="/Thinking-Life/life.png" rel="gallery_ck4uzoxk30000dgckfhtry8q0" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
                 <img src="/Thinking-Life/life.png" itemprop="contentUrl">
               </a>
             

@@ -117,12 +117,12 @@
 <meta property="og:site_name" content="SDN工作者">
 <meta property="og:description" content="前不久，公司的项目正在从基于OSGI的karaf框架切换到tomcat平台，借此机会，想研究一下tomcat源码，对应用底层的运行机制进一步理解，提升自己的能力。  Tomcat源码下载tomcat官网 点击左侧Download下面的最新版本 Tomcat 9,可以看到tomcat分为Binary Distributions与Source Code Distributions两种发行方式，这里选">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/Tomcat01/Tomcat01/tomcat.jpg">
-<meta property="og:updated_time" content="2020-01-01T07:33:21.837Z">
+<meta property="og:image" content="http://yoursite.com/Tomcat01/Tomcat01/tomcat2.jpg">
+<meta property="og:updated_time" content="2020-01-01T07:38:49.962Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Tomcat源码导入IDEA">
 <meta name="twitter:description" content="前不久，公司的项目正在从基于OSGI的karaf框架切换到tomcat平台，借此机会，想研究一下tomcat源码，对应用底层的运行机制进一步理解，提升自己的能力。  Tomcat源码下载tomcat官网 点击左侧Download下面的最新版本 Tomcat 9,可以看到tomcat分为Binary Distributions与Source Code Distributions两种发行方式，这里选">
-<meta name="twitter:image" content="http://yoursite.com/Tomcat01/Tomcat01/tomcat.jpg">
+<meta name="twitter:image" content="http://yoursite.com/Tomcat01/Tomcat01/tomcat2.jpg">
 
 
 
@@ -399,7 +399,7 @@
                 
               
 
-              <time title="创建时间：2020-01-01 15:31:08 / 修改时间：15:33:21" itemprop="dateCreated datePublished" datetime="2020-01-01T15:31:08+08:00">2020-01-01</time>
+              <time title="创建时间：2020-01-01 15:31:08 / 修改时间：15:38:49" itemprop="dateCreated datePublished" datetime="2020-01-01T15:31:08+08:00">2020-01-01</time>
             
 
             
@@ -464,8 +464,8 @@
           
           
             <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox" href="/Tomcat01/tomcat.jpg" rel="gallery_ck4uzj1w200030ockfrzrd6qm" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="/Tomcat01/tomcat.jpg" itemprop="contentUrl">
+              <a class="post-gallery-img fancybox" href="/Tomcat01/tomcat2.jpg" rel="gallery_ck4uzoxka0002dgckyxftet02" itemscope="" itemtype="http://schema.org/ImageObject" itemprop="url">
+                <img src="/Tomcat01/tomcat2.jpg" itemprop="contentUrl">
               </a>
             
           
@@ -483,7 +483,7 @@
 <p>点击左侧Download下面的最新版本 Tomcat 9,可以看到tomcat分为Binary Distributions与Source Code Distributions两种发行方式，这里选择Source Code Distributions源码发行版。</p>
 <p>下载，解压。</p>
 <p>jdk、maven安装以及本地环境变量的配置，网上很多。</p>
-<p>准备完毕。</p>
+<p>准备完毕。<br><a id="more"></a></p>
 <h3 id="Tomcat源码导入"><a href="#Tomcat源码导入" class="headerlink" title="Tomcat源码导入"></a>Tomcat源码导入</h3><p>当然是使用最好用的IDEA了。tomcat使用的Ant软件构件工具，我们使用更熟悉的maven工具。maven工程必须要有一个pom.xml，这是定义项目所依赖的jar包。</p>
 <p>tomcat依赖哪些jar包呢？其实这个pom.xml网上也有很多，但是里面定义的依赖的jar版本号有可能与你下载的tomcat版本不匹配。</p>
 <p>build.properties.default这个文件是tomcat源码中的，这里面定义了你所下载的tomcat版本所对应的依赖的jar包版本。你可以与pom文件中的jar版本作比较，替换成此文件中的版本号。</p>

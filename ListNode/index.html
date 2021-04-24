@@ -119,7 +119,7 @@
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/ListNode/ListNode/相交链表01.png">
 <meta property="og:image" content="http://yoursite.com/ListNode/ListNode/环的起点01.png">
-<meta property="og:updated_time" content="2021-04-24T10:10:18.885Z">
+<meta property="og:updated_time" content="2021-04-24T10:13:05.255Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="链表">
 <meta name="twitter:description" content="链表的题目，主要有两大要点，其一是思路，其二是编码。 LeetCode206:反转一个单链表维护三个指针，prev, current, next，从前往后，以此反转 12345678910111213public ListNode reverseList(ListNode head) &amp;#123;    ListNode prev = null;    ListNode current = hea">
@@ -400,7 +400,7 @@
                 
               
 
-              <time title="创建时间：2021-04-24 16:20:55 / 修改时间：18:10:18" itemprop="dateCreated datePublished" datetime="2021-04-24T16:20:55+08:00">2021-04-24</time>
+              <time title="创建时间：2021-04-24 16:20:55 / 修改时间：18:13:05" itemprop="dateCreated datePublished" datetime="2021-04-24T16:20:55+08:00">2021-04-24</time>
             
 
             
@@ -452,6 +452,7 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    ListNode dummy = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">    dummy.next = head;</span><br><span class="line">    </span><br><span class="line">    ListNode prev = dummy;</span><br><span class="line">    <span class="keyword">while</span> (prev.next != <span class="keyword">null</span> &amp;&amp; prev.next.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">        ListNode next1 = prev.next;</span><br><span class="line">        ListNode next2 = next1.next;</span><br><span class="line">        ListNode next3 = next2.next;</span><br><span class="line">        </span><br><span class="line">        prev.next = next2;</span><br><span class="line">        next1.next = next3;</span><br><span class="line">        next2.next =next1;</span><br><span class="line">        </span><br><span class="line">        prev = next1;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> dummy.next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>思路2：递归反转，维护next1，next2两个指针</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> ListNode <span class="title">swapPairs</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    ListNode next1 = head.next;</span><br><span class="line">    ListNode next2 = next1.next;</span><br><span class="line">    next1.next = head;</span><br><span class="line">    head.next = swapPairs(next2);</span><br><span class="line">    <span class="keyword">return</span> next1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h3 id="LeetCode160-相交链表"><a href="#LeetCode160-相交链表" class="headerlink" title="LeetCode160:相交链表"></a>LeetCode160:相交链表</h3><p><img src="./ListNode/相交链表01.png" alt="160"></p>
 <p>如上图，分为三部分 a\b\c。解题思想就是 a+c+b = b+c+a</p>
 <p>也就是两个链表遍历，结束时从另一个链表的头继续遍历，直到相遇</p>

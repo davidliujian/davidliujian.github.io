@@ -109,18 +109,18 @@
 
 
 
-  <meta name="description" content="三层Web应用程序模型 第一层浏览器是表示层，完成用户接口功能。更“瘦” 第二层Web服务器是功能层，完成客户的应用功能。 第三层数据库服务器是数据层，完成数据处理请求。Web服务器接受客户请求，建立数据库连接，请求数据处理，而后数据库结果返回Web服务器，再传至客户端。 功能层的缺点:1.体积庞大、功能臃肿、复用性差2.须自己考虑诸如分布处理、负载平衡、事务逻辑、持久性和安全性等诸多问题所以：一">
-<meta name="keywords" content="middleware,Java EE">
+  <meta name="description" content="线段树   动态求数组的区间和 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283/** * 线段树 * arr[] = &amp;#123;1">
+<meta name="keywords" content="Tree">
 <meta property="og:type" content="article">
-<meta property="og:title" content="middleware4">
-<meta property="og:url" content="http://yoursite.com/middleware4/index.html">
+<meta property="og:title" content="线段树">
+<meta property="og:url" content="http://yoursite.com/segmentTree/index.html">
 <meta property="og:site_name" content="加油吧！">
-<meta property="og:description" content="三层Web应用程序模型 第一层浏览器是表示层，完成用户接口功能。更“瘦” 第二层Web服务器是功能层，完成客户的应用功能。 第三层数据库服务器是数据层，完成数据处理请求。Web服务器接受客户请求，建立数据库连接，请求数据处理，而后数据库结果返回Web服务器，再传至客户端。 功能层的缺点:1.体积庞大、功能臃肿、复用性差2.须自己考虑诸如分布处理、负载平衡、事务逻辑、持久性和安全性等诸多问题所以：一">
+<meta property="og:description" content="线段树   动态求数组的区间和 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283/** * 线段树 * arr[] = &amp;#123;1">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2017-05-13T05:20:03.497Z">
+<meta property="og:updated_time" content="2021-07-14T14:45:21.172Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="middleware4">
-<meta name="twitter:description" content="三层Web应用程序模型 第一层浏览器是表示层，完成用户接口功能。更“瘦” 第二层Web服务器是功能层，完成客户的应用功能。 第三层数据库服务器是数据层，完成数据处理请求。Web服务器接受客户请求，建立数据库连接，请求数据处理，而后数据库结果返回Web服务器，再传至客户端。 功能层的缺点:1.体积庞大、功能臃肿、复用性差2.须自己考虑诸如分布处理、负载平衡、事务逻辑、持久性和安全性等诸多问题所以：一">
+<meta name="twitter:title" content="线段树">
+<meta name="twitter:description" content="线段树   动态求数组的区间和 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283/** * 线段树 * arr[] = &amp;#123;1">
 
 
 
@@ -129,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/middleware4/">
+  <link rel="canonical" href="http://yoursite.com/segmentTree/">
 
 
 
@@ -139,7 +139,7 @@
   };
 </script>
 
-  <title>middleware4 | 加油吧！</title>
+  <title>线段树 | 加油吧！</title>
   
 
 
@@ -355,7 +355,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/middleware4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/segmentTree/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="David">
@@ -372,7 +372,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">middleware4
+          <h1 class="post-title" itemprop="name headline">线段树
               
             
           </h1>
@@ -397,7 +397,7 @@
                 
               
 
-              <time title="创建时间：2017-05-13 13:19:00 / 修改时间：13:20:03" itemprop="dateCreated datePublished" datetime="2017-05-13T13:19:00+08:00">2017-05-13</time>
+              <time title="创建时间：2021-07-14 22:41:15 / 修改时间：22:45:21" itemprop="dateCreated datePublished" datetime="2021-07-14T22:41:15+08:00">2021-07-14</time>
             
 
             
@@ -419,7 +419,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/middleware/" itemprop="url" rel="index"><span itemprop="name">middleware</span></a></span>
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/LeetCode/" itemprop="url" rel="index"><span itemprop="name">LeetCode</span></a></span>
 
                 
                 
@@ -460,104 +460,9 @@
       
 
       
-        <h4 id="三层Web应用程序模型"><a href="#三层Web应用程序模型" class="headerlink" title="三层Web应用程序模型"></a>三层Web应用程序模型</h4><ul>
-<li>第一层浏览器是表示层，完成用户接口功能。更“瘦”</li>
-<li>第二层Web服务器是功能层，完成客户的应用功能。</li>
-<li>第三层数据库服务器是数据层，完成数据处理请求。<br>Web服务器接受客户请求，建立数据库连接，请求数据处理，而后数据库结果返回Web服务器，再传至客户端。<blockquote>
-<p>功能层的缺点:1.体积庞大、功能臃肿、复用性差<br>2.须自己考虑诸如分布处理、负载平衡、事务逻辑、持久性和安全性等诸多问题<br>所以：一分为二：显示逻辑层和业务逻辑层<br> 1.显示逻辑层：接受客户请求，调用业务逻辑层的服务，并将结果呈现给客户端。<br>  2.业务逻辑层：完成具体的业务处理。其中隐含了分布处理、负载平衡、事务逻辑、持久性和安全性等技术</p>
-<a id="more"></a>
-</blockquote>
-<h4 id="容器类型"><a href="#容器类型" class="headerlink" title="容器类型"></a>容器类型</h4></li>
-<li>Java EE服务器：是Java EE产品的运行部分。一个Java EE服务器提供EJB容器和Web容器。</li>
-<li>Enterprise JavaBeans(EJB)容器：管理Java EE应用程序的enterprise bean的执行。Enterprise bean和它的容器运行在Java EE服务器中。</li>
-<li>Web容器：管理Java EE应用程序的JSP和Servlet组件的执行。Web组件和它的容器也运行在J2EE服务器中。</li>
-<li>客户端应用程序容器：管理应用程序客户端组件的运行。</li>
-<li>Applet容器：管理applet的执行。由运行在客户端的一个Web浏览器和Java插件一同组成。 </li>
-</ul>
-<h4 id="公共服务"><a href="#公共服务" class="headerlink" title="公共服务"></a>公共服务</h4><ul>
-<li>JNDI (名字和目录服务)：共享用户，网络设备，软件组件，应用模块，服务及其他信息</li>
-<li>RMI/IIOP (支持IIOP协议的远程方法调用): 访问与RMI编程规则兼容的CORBA服务</li>
-<li>JMS(消息服务)：在企业中异步交换业务数据和事件的灵活而可靠的机制</li>
-<li>JDBC (数据库连接服务)</li>
-<li>JTS(java transaction service)/JTA (java transaction API)</li>
-<li>JavaMail和JAF(JavaBeans Activation Framework)</li>
-<li>JCA/JCE/JSSE/JAAS(安全服务体系)//Cryptography</li>
-<li>使用JAXP(Java API for XML Parsing)的XML解析服务</li>
-<li>Java Servlet——是用Java写的一个服务器端小程序，可以处理用户的HTTP请求，返回结果。 </li>
-<li>JSP (JavaServer Page)——一种基于HTML文件（就是一个模板）处理之后能够生成静态内容。可以包含脚本代码的片段，以在最终生成的脚本静态文件中生成。 </li>
-<li>JSTL (JSP标准标签库，JavaServer Page Standard Tag Library)——一组可以模仿脚本代码功能的用在JSP的标准标签。例如，遍历客户端并显示他们对应的信息。</li>
-<li>JSF (Java Server Face)——包含JSF标签（类似于LSTL标签）的JSP页面。此外，JSF允许在页面中定义导航模块（类似于Spring web flow），包括Facelets。 </li>
-<li>The Java API for XML-based Web Services (Java中用来创建基于XML的Web的API，JAX-WS)——对于使用XML通信的Web服务来说至关重要。 </li>
-<li>The Java API for XML Binding (序列化为XML的API，JAXB)——一种可以在JavaBeans和XML文件之间相互转化的方式</li>
-<li>JMS（Java信息服务，Java Message Service）——这个API保证服务器和应用在网络上的通信可靠、异步。ActiveMQ实现了JMS。 </li>
-<li>JavaMail API——提供通过应用程序发送邮件方式。 </li>
-<li>JAXR（提供XML注册的API，Java API for XML Registries)——一个可以注册包含了元数据的XML的API。 </li>
-<li>JPA(Java持久化API，Java Persistence API)——这是一个在数据库中存储对象的ORM（对象关系表，Object/relational mapping)定义。</li>
-<li>JNDI（Java命名和目录接口）——能存储和检索资源、通过名字查找信息的方式</li>
-<li>JAAS（Java鉴别与授权服务，Java Authentication and Authorization Service)——识别并控制服务权限的一张方式。 </li>
-<li>JAX-RS——定义REST（含状态传输）之类的服务的API。 </li>
-<li>Managed Beans——一个可以执行嵌入代码的Java对象。在Sping框架中，这是一些添加了@Autowired注释的对象。 </li>
-<li>CDI（上下文和依赖注入，Contexts and Dependency Injection for Java EE）——CDI是Java EE整个下一代类型安全的依赖注入的事实上的API。在Sping框架中，应用程序可以设计应用的上下文，控制反转（IoC）和依赖注入功能（DI）。 </li>
-<li>Bean确认——通过设定好的规则判断Java Beans的状态是有效的。 </li>
-<li>JACC（Java Authorization Contract for Containers）——在J2EE应用服务器和特定的授权认证服务器之间定义的一个连接的协约。 </li>
-<li>JASPIC（Java认证服务提供者接口，Java Authentication Service Provider Interface）——这是与JACC互补认证的SPI（也就是服务API，Service API）。它定义了应用程序如何通过传统的认证服务。 </li>
-</ul>
-<h4 id="Java-EE-7新特征"><a href="#Java-EE-7新特征" class="headerlink" title="Java EE 7新特征"></a>Java EE 7新特征</h4><ul>
-<li>低延迟数据交换：Java API for WebSocket 1.0<ul>
-<li>基于 HTTP 的 WebSockets 为解决低延迟和双向通信提供了一种解决方案 </li>
-</ul>
-</li>
-<li>简化应用数据分析和处理：Java API for JSON Processing 1.0<ul>
-<li>通过 Java API 中的 JSON Processing 1.0，JSON 处理过程标准化为一个单一的 API，应用程序不需要使用第三方的类库。 </li>
-</ul>
-</li>
-<li>可扩展的RESTful服务：JAX-RS 2.0<ul>
-<li>增加了异步响应处理，这对于支持对数据有着高要求的 HTML5 客户端的扩展是至关重要的 </li>
-<li>可以使用过滤器和实体拦截器。这样开发人员就可以使用标准的 API 来实现过滤和拦截功能，使开发过程变得更加便捷和高效 </li>
-</ul>
-</li>
-<li>增强开发的易用性：JSF 2.2<ul>
-<li>增加了对 HTML5 的支持 </li>
-</ul>
-</li>
-</ul>
-<h4 id="EJB"><a href="#EJB" class="headerlink" title="EJB"></a>EJB</h4><ul>
-<li>EJB容器是一个EJB引擎，它提供了EJB组件运行的环境，并对EJB组件进行管理</li>
-<li>EJB容器一般包含在EJB服务器（或应用服务器）中，EJB服务器可以拥有一到多个EJB容器</li>
-<li>比较有名的支持EJB的服务器有GlassFish ，Sun One，Interstage，Websphere，Weblogic，JBoss，JRun等</li>
-</ul>
-<h4 id="Enterprise-Bean"><a href="#Enterprise-Bean" class="headerlink" title="Enterprise Bean"></a>Enterprise Bean</h4><ul>
-<li>Enterprise beans are Java EE components that implement Enterprise JavaBeans (EJB) technology </li>
-<li>在EJB容器里运行</li>
-<li>使用java语言编写，是封装了应用的业务逻辑的服务端组件</li>
-</ul>
-<p>什么时候使用Enterprise Bean？</p>
-<ul>
-<li>应用必须可扩展</li>
-<li>事物必须确保数据的完整性</li>
-<li>程序将拥有各种各样的客户端</li>
-</ul>
-<p>Enterprise Bean类型</p>
-<ul>
-<li>session</li>
-<li>message-driven:一种enterprise bean允许java EE程序异步处理消息</li>
-</ul>
-<h4 id="什么是session-bean-会话bean有几种子类型？分别的应用场合。"><a href="#什么是session-bean-会话bean有几种子类型？分别的应用场合。" class="headerlink" title="什么是session　bean?会话bean有几种子类型？分别的应用场合。"></a>什么是session　bean?会话bean有几种子类型？分别的应用场合。</h4><blockquote>
-<p>session bean 是一种非持久的bean,封装了业务逻辑，可以在本地、远程或者web service 客户端以编程形式调用，分为三类：            </p>
-<pre><code>- 有状态session bean:状态代表着服务器与某一特定客户端的交互，通过方法调用，bean可以保持客户端的信息协调客户端和应用程序其他组件，为客户端提供一个简单视图，并负责管理enterprise bean 的工作流          
-- 无状态session bean:实现了web service，为所有客户端提供服务    
-- 单例 session bean:可以被多线程访问，状态全局共享          
-</code></pre></blockquote>
-<h4 id="JPA-：-Java-Persistence-API"><a href="#JPA-：-Java-Persistence-API" class="headerlink" title="JPA ：   Java Persistence API"></a>JPA ：   Java Persistence API</h4><blockquote>
-<p>JPA是基于Java持久化的解决方案，主要是为了解决ORM框架的差异，它的出现在某种程度上能够解决目前ORM框架之间不能够兼容的问题，对开发人员来说，能够更好的在JPA规范下进行系统开发。</p>
-</blockquote>
-<blockquote>
-<p>JPA并不是一项技术，而是一种标准，因为JPA只是一套接口，本身不能完成任何事情。JPA只是规范了Java持久化的官方标准。JPA有以下几个优点:          </p>
-<pre><code>- 可持久化Java对象
-- 使用简单
-- 规范标准化
-- 事务性、大数据量
-</code></pre></blockquote>
+        <p>线段树  </p>
+<p>动态求数组的区间和</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 线段树</span></span><br><span class="line"><span class="comment"> * arr[] = &#123;1, 3, 5, 7, 9, 11&#125;</span></span><br><span class="line"><span class="comment"> * tree[] = &#123;36,9,27,4,5,16,11,1,3,0,0,7,9,0,0&#125;</span></span><br><span class="line"><span class="comment"> *                   36 [0-5]</span></span><br><span class="line"><span class="comment"> *    [0-2]  9                  27[3-5]</span></span><br><span class="line"><span class="comment"> * [0-1] 4      5[2]       16[3-4]    11[5]</span></span><br><span class="line"><span class="comment"> *   1     3             7    9</span></span><br><span class="line"><span class="comment"> *  [0]    [1]          [3]   [4]</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">segmentTree</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">buildTree</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span>[] tree, <span class="keyword">int</span> node, <span class="keyword">int</span> start, <span class="keyword">int</span> end)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (start == end) &#123;</span><br><span class="line">            tree[node] = arr[start];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">int</span> leftNode = <span class="number">2</span> * node + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> rightNode = <span class="number">2</span> * node + <span class="number">2</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">            buildTree(arr, tree, leftNode, start, mid);</span><br><span class="line">            buildTree(arr, tree, rightNode, mid + <span class="number">1</span>, end);</span><br><span class="line">            tree[node] = tree[leftNode] + tree[rightNode];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 将arr[]的idx下标改成val值</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span>[] tree, <span class="keyword">int</span> node, <span class="keyword">int</span> start, <span class="keyword">int</span> end, <span class="keyword">int</span> idx, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (start == end) &#123;</span><br><span class="line">            arr[idx] = val;</span><br><span class="line">            tree[node] = val;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">int</span> leftNode = <span class="number">2</span> * node + <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">int</span> rightNode = <span class="number">2</span> * node + <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">if</span> (idx &gt;= start &amp;&amp; idx &lt;= mid) &#123;</span><br><span class="line">                update(arr, tree, leftNode, start, mid, idx, val);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                update(arr, tree, rightNode, mid + <span class="number">1</span>, end, idx, val);</span><br><span class="line">            &#125;</span><br><span class="line">            tree[node] = tree[leftNode] + tree[rightNode];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 求arr数组中下标left到right的和</span></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">query</span><span class="params">(<span class="keyword">int</span>[] arr, <span class="keyword">int</span>[] tree, <span class="keyword">int</span> node, <span class="keyword">int</span> start, <span class="keyword">int</span> end, <span class="keyword">int</span> left, <span class="keyword">int</span> right)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (left &gt; end || right &lt; start) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (start &gt;= left &amp;&amp; end &lt;= right) &#123;</span><br><span class="line">            <span class="keyword">return</span> tree[node];</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (left == right) &#123;</span><br><span class="line">            <span class="keyword">return</span> tree[node];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> leftNode = <span class="number">2</span> * node + <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> rightNode = <span class="number">2</span> * node + <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> mid = start + (end - start) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">int</span> leftSum = query(arr, tree, leftNode, start, mid, left, right);</span><br><span class="line">        <span class="keyword">int</span> rightSum = query(arr, tree, rightNode, mid + <span class="number">1</span>, end, left, right);</span><br><span class="line">        <span class="keyword">return</span> leftSum + rightSum;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] arr = &#123;<span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">11</span>&#125;;</span><br><span class="line">        <span class="keyword">int</span>[] tree = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">1000</span>];</span><br><span class="line">        buildTree(arr, tree, <span class="number">0</span>, <span class="number">0</span>, arr.length - <span class="number">1</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">15</span>; i++) &#123;</span><br><span class="line">            System.out.print(tree[i] + <span class="string">"  "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">int</span> sum1 = query(arr, tree, <span class="number">0</span>, <span class="number">0</span>, arr.length - <span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>);</span><br><span class="line">        System.out.println(sum1);</span><br><span class="line"></span><br><span class="line">        update(arr, tree, <span class="number">0</span>, <span class="number">0</span>, arr.length - <span class="number">1</span>, <span class="number">4</span>, <span class="number">6</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">15</span>; i++) &#123;</span><br><span class="line">            System.out.print(tree[i] + <span class="string">"  "</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println();</span><br><span class="line">        <span class="keyword">int</span> sum2 = query(arr, tree, <span class="number">0</span>, <span class="number">0</span>, arr.length - <span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>);</span><br><span class="line">        System.out.println(sum2);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -581,9 +486,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/middleware/" rel="tag"># middleware</a>
-          
-            <a href="/tags/Java-EE/" rel="tag"># Java EE</a>
+            <a href="/tags/Tree/" rel="tag"># Tree</a>
           
         </div>
       
@@ -596,8 +499,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/middleware3/" rel="next" title="middleware3">
-                <i class="fa fa-chevron-left"></i> middleware3
+              <a href="/巧妙的思想/" rel="next" title="巧妙的思想">
+                <i class="fa fa-chevron-left"></i> 巧妙的思想
               </a>
             
           </div>
@@ -605,10 +508,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/数据交换方式/" rel="prev" title="网络技术与应用--数据交换方式">
-                网络技术与应用--数据交换方式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -658,17 +557,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -857,22 +747,6 @@
       </section>
 
       
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#三层Web应用程序模型"><span class="nav-number">1.</span> <span class="nav-text">三层Web应用程序模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#容器类型"><span class="nav-number">2.</span> <span class="nav-text">容器类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#公共服务"><span class="nav-number">3.</span> <span class="nav-text">公共服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Java-EE-7新特征"><span class="nav-number">4.</span> <span class="nav-text">Java EE 7新特征</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EJB"><span class="nav-number">5.</span> <span class="nav-text">EJB</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Enterprise-Bean"><span class="nav-number">6.</span> <span class="nav-text">Enterprise Bean</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是session-bean-会话bean有几种子类型？分别的应用场合。"><span class="nav-number">7.</span> <span class="nav-text">什么是session　bean?会话bean有几种子类型？分别的应用场合。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#JPA-：-Java-Persistence-API"><span class="nav-number">8.</span> <span class="nav-text">JPA ：   Java Persistence API</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
 
       
 
@@ -1037,7 +911,7 @@
   
     <script type="text/javascript">
       window.livereOptions = {
-        refer: 'middleware4/'
+        refer: 'segmentTree/'
       };
       (function(d, s) {
         var j, e = d.getElementsByTagName(s)[0];
